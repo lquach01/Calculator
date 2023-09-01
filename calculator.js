@@ -7,7 +7,7 @@ var numNum = 1;
 function incrNum(num) {
     if (numNum == 1){
         let sheesh = number1.toString();
-        let newNum = sheesh.concat(num);
+        newNum = sheesh.concat(num);
         number1 = Number(newNum);
         document.getElementById("my-text").innerHTML = newNum;
     } else {
@@ -18,6 +18,9 @@ function incrNum(num) {
     }
 
 }
+
+
+
 
 function div() {
     numNum = 2;
@@ -56,6 +59,12 @@ function equals() {
 }
 
 
-
+function reset() {
+    number2 = 0;
+    number1 = 0;
+    sign = "";
+    numNum = 1;
+    document.getElementById("my-text").innerHTML = "0";
+}
 
 
