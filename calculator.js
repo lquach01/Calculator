@@ -1,5 +1,5 @@
-var number2 = 0;
-var number1 = 0;
+var number2 = "";
+var number1 = "";
 var sign = "";
 var numNum = 1;
 
@@ -23,21 +23,33 @@ function incrNum(num) {
 
 
 function div() {
+    if (numNum == 2) {
+        equals();
+    }
     numNum = 2;
     sign = "/";
 }
 
 function mult() {
+    if (numNum == 2) {
+        equals();
+    }
     numNum = 2;
     sign = "X";
 }
 
 function add() {
+    if (numNum == 2) {
+        equals();
+    }
     numNum = 2;
     sign = "+";
 }
 
 function sub() {
+    if (numNum == 2) {
+        equals();
+    }
     numNum = 2;
     sign = "-";
 }
@@ -46,16 +58,26 @@ function sub() {
 function equals() {
     let sol = 0;
     if ((sign.localeCompare("/")) == 0) {
-        document.getElementById("my-text").innerHTML = number1/number2;
+        sol = number1/number2;
+        document.getElementById("my-text").innerHTML = sol;
     } else if ((sign.localeCompare("X")) == 0) {
-        document.getElementById("my-text").innerHTML = number1 * number2;
+        sol = number1 * number2;
+        document.getElementById("my-text").innerHTML = sol;
     } else if ((sign.localeCompare("+")) == 0) {
-        document.getElementById("my-text").innerHTML = number1 + number2;
+        sol = number1 + number2;
+        document.getElementById("my-text").innerHTML = sol;
     } else if ((sign.localeCompare("-")) == 0) {
-        document.getElementById("my-text").innerHTML = number1 - number2;
+        sol = number1 - number2;
+        document.getElementById("my-text").innerHTML = sol;
     } else {
         document.getElementById("my-text").innerHTML = "darn";
     }
+
+    number1 = sol;
+    number2 = "";
+    numNum = 1;
+
+
 }
 
 
