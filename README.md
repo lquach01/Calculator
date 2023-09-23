@@ -1,4 +1,5 @@
 # calculator
-making a VERY basic calculator
+Making a calculator that can add, subtract, multiply, and divide numbers. 
+Reset button allows users to reset calculations. 
 
-The very basic calculator will be able to add, subtract, divide, and multiply numbers. There is no reset button. Can only do one calculation. 
+![screenshot] (./screenshot.png)
